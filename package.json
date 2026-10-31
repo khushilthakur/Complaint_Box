@@ -1,0 +1,25 @@
+{
+  "name": "student-complain-box",
+  "version": "1.0.0",
+  "description": "Multi-College Student Complaint Management System (Python Flask + Supabase)",
+  "private": true,
+  "scripts": {
+    "start": "python server/app.py",
+    "dev": "concurrently \"python server/app.py\" \"npm run dev --prefix client\"",
+    "server": "python server/app.py",
+    "client": "npm run dev --prefix client",
+    "postinstall": "npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "test": "python test_flask_api.py",
+    "test:supabase": "python server/test_supabase.py",
+    "server:py": "python server/app.py",
+    "dev:py": "concurrently \"python server/app.py\" \"npm run dev --prefix client\"",
+    "test:py": "python test_flask_api.py",
+    "start:node": "node server/server.js",
+    "dev:node": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "server:node": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
